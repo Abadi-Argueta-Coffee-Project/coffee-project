@@ -1,5 +1,5 @@
-"use strict"
-
+"use strict";
+(function () {
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -89,7 +89,7 @@ function renderAllCoffeesList(coffees) {
 };
 
 
-// updating what is being displayed based on the roast selection
+// updating what is being displayed based on the roast selection & search
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let search = coffeeSearchBar.value;
@@ -147,3 +147,5 @@ selectedRoast.addEventListener('change', updateCoffees);
 coffeeSearchBar.addEventListener("keyup", updateCoffees);
 
 submitBtn.addEventListener("click", addCoffee);
+
+})();
